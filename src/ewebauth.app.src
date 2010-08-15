@@ -1,0 +1,11 @@
+{application, ewebauth,
+ [
+  {description, "yaws authmod provider for Stanford WebAuth"},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.

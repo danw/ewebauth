@@ -1,0 +1,7 @@
+A yaws authmod provider for Standford Webauth.
+
+http://yaws.hyber.org/
+
+http://webauth.stanford.edu/
+
+This is currently used in Drink - http://github.com/danw/drink
