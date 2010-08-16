@@ -96,7 +96,7 @@ init(Sconf) when is_record(Sconf, sconf) ->
     
     % Start the port
     
-    PortName = filename:join(code:priv_dir(drink), "ewebauth"),
+    PortName = filename:join(code:priv_dir(ewebauth), "ewebauth"),
     Port = open_port({spawn, PortName}, [{packet, 2}, binary, exit_status]),
     
     AppKey = #webauth_key{name = app, data = crypto:rand_bytes(16)},
