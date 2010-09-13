@@ -227,7 +227,7 @@ request_new_session_key(State) ->
             {verify, 2},
             {cacertfile, State#was_state.sslca}
         ]}],
-        [{body_format, binary}]),
+        [{body_format, binary}], ewebauth),
     case Result of
         {{_, 200, _}, Headers, ResBody} ->
             case erlsom:simple_form(ResBody) of
