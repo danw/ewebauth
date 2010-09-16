@@ -150,7 +150,7 @@ handle_call({handle, Arg}, _From, State) ->
                 {ok, {User, _, _} = Attrs, NewState} ->
                     AppToken = webauth_cookie_create(Attrs, NewState),
                     Cookie = yaws_api:setcookie(?WEBAUTH_COOKIE, AppToken, "/", "", "", on),
-                    {reply, [Cookie, {redirect, "https://drink.csh.rit.edu/"}], NewState};
+                    {reply, [Cookie, {redirect_local, "/"}], NewState};
                 {error, Reason, NewState} ->
                     {reply, [{html, "<h1>Please refresh</h1><br>Permission Denied: " ++ io_lib:format("~p", [Reason])}], NewState};
                 E ->
